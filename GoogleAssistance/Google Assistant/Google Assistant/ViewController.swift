@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     //MARK: Properties
     
     
+    @IBOutlet weak var ratingsView: RatingView!
     
     var messageOut="sample message from variable"
     
@@ -25,10 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
    
     @IBOutlet weak var photoImageView: UIImageView!
     
-    @IBAction func addMealAction(_ sender: UIButton) {
-        outputLabel.text=inputTextField.text;
-        
-    }
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +71,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         present(imagePickerController, animated: true, completion: nil)
     }
     
-      func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
