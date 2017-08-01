@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate,
     UINavigationControllerDelegate // from UIImagePickerController, its  imagePickerDelegate, which is set to this page using this delegate
+    // when user picks an image he should know where to navigate now
 {
     
     //MARK: Properties
@@ -72,7 +73,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+      func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
